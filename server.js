@@ -9,6 +9,11 @@ dotenv.config({ path: './config.env'});
 // * Express App
 const app = express();
 
+// Dev logging - runs only in dev mode
+if(process.env.NODE_ENV === 'development') {
+    app.use(morgan('dev'));
+}
+
 // * Routes
 app.use('/api/v1/profile', require('./routes/profile'));
 
