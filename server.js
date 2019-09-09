@@ -11,6 +11,7 @@ const app = express();
 
 // Dev logging - runs only in dev mode
 if(process.env.NODE_ENV === 'development') {
+    // use morgan in dev 'mode'
     app.use(morgan('dev'));
 }
 
