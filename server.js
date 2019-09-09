@@ -9,6 +9,8 @@ dotenv.config({ path: './config.env'});
 // * Express App
 const app = express();
 
+// * Routes
+app.use('/api/v1/profile', require('./routes/profile'));
 
 
 
